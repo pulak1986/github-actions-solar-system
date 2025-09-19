@@ -5,11 +5,7 @@ on:
   push:
     branches:
       - main
-      - 'feature/*'
-env:
-  MONGO_URI: ${{env.MONGO_URI}}
-  MONGO_USERNAME: ${{env.MONGO_USERNAME}}
-  MONGO_PASSWORD: ${{ secrets.MONGO_PASSWORD }}     
+      - 'feature/*'  
     
 jobs:
     unit-testing:
@@ -35,6 +31,7 @@ jobs:
           with:
             name: Mocha-Test-Result
             path: test-results.xml
+
 
 
 
